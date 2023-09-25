@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - preConditions:
+      - runningAs:
+          username: myuser
+  - changeSet:
+      id : 1
+      author: daivx1
+      changes:
+        - sqlFile:
+            path: tables/init_table_dummy_data.sql
+            relativeToChangeLogFile: true
+            splitStatements: true
+            stripComments: true
